@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/allerta_stencil</item>
+        <item>@font/allerta_stencil1</item>
+        <item>@font/allerta_stencil2</item>
+        <item>@font/allerta_stencil3</item>
+        <item>@font/allerta_stencil4</item>
+        <item>@font/allerta_stencil5</item>
+    </array>
+</resources>

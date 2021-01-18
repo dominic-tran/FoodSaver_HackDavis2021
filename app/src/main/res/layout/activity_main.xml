@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#23272a"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allerta_stencil"
+                    android:text="Food Name"
+                    android:textColor="#99AAB5"
+                    android:textSize="18sp"
+                    android:translationX="140dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter your food name..." />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allerta_stencil1"
+                    android:text="Where is the Food Stored?"
+                    android:textColor="#99AAB5"
+                    android:textSize="18sp"
+                    android:translationX="85dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/locationInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter location of food stored..." />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:translationY="-260dp"
+                    app:srcCompat="@drawable/foodsaver_white__2_" />
+
+                <TextView
+                    android:id="@+id/expirationDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allerta_stencil2"
+                    android:text="Date of Expiration"
+                    android:textColor="#99AAB5"
+                    android:textSize="18sp"
+                    android:translationX="125dp" />
+
+                <TextView
+                    android:id="@+id/dateFormat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allerta_stencil3"
+                    android:text="Ex: 00/00/0000"
+                    android:textColor="#99AAB5"
+                    android:translationX="145dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:translationX="50dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/monthInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Month..." />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:translationX="155dp"
+                    android:translationY="-60dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dayInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Day..." />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:translationX="260dp"
+                    android:translationY="-120dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/yearInput"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Year..." />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/max10Warning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="*Max of 10 Food Items"
+                    android:textColor="#99AAB5"
+                    android:translationX="125dp"
+                    android:translationY="-65dp" />
+
+                <Button
+                    android:id="@+id/confirmButton"
+                    android:layout_width="150dp"
+                    android:layout_height="75dp"
+                    android:backgroundTint="#7289da"
+                    android:onClick="confirmFood"
+                    android:text="Confirm"
+                    android:translationX="120dp"
+                    android:translationY="-70dp" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="350dp"
+                    android:layout_height="5dp"
+                    android:background="?android:attr/listDivider"
+                    android:translationX="25dp"
+                    android:translationY="-20dp" />
+
+                <TextView
+                    android:id="@+id/expiringSoon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allerta_stencil4"
+                    android:text="Expiring/Expired Food:"
+                    android:textColor="#DC4545"
+                    android:translationX="115dp" />
+
+                <TableLayout
+                    android:id="@+id/expiringTable"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:translationX="25dp"
+                    android:translationY="5dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </TableLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="350dp"
+                    android:layout_height="5dp"
+                    android:background="?android:attr/listDivider"
+                    android:translationX="25dp"
+                    android:translationY="-20dp" />
+
+                <TextView
+                    android:id="@+id/foodList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allerta_stencil5"
+                    android:text="Food List:"
+                    android:textColor="#7289DA"
+                    android:translationX="150dp" />
+
+                <TableLayout
+                    android:id="@+id/table"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:translationX="25dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </TableLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
